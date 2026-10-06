@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech learner</title>
+    <style>
+        #div1{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWUfkqGaoFfzRQbgig8S3_PPbZe7R3RWe9Ng4uoryIsQ&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding-top: 30px;
+}
+table{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+    color: white;
+    padding: 90px;
+    opacity: 0.3;
+}
+#Welcome{
+    text-align: center;
+    color: darkgreen;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px ;
+}
+body{
+    margin: 0;
+    animation: anhad 6s infinite;
+}
+@keyframes anhad{
+    0%{background-color: lightseagreen;}
+    25%{background-color: lightgoldenrodyellow;}
+    50%{background-color: lightslategray;}
+    75%{background-color: lightcoral}
+    100%{background-color: lightgreen;}
+}
+h2{
+    text-align: center;
+    margin-top:20px ;
+    animation: anhad1 2s infinite alternate;
+}
+@keyframes anhad1{
+    from{font-size: 20px; color: green;}
+    to{font-size: 25px; color: blue;}
+}
+.quiz-section{
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    background-color: tomato;
+}
+.card{
+    background-color: white;
+    margin: ;
+    width: 32%; 
+    text-align: center;
+    font-size: 18px;
+}
+.card img{
+    width: 90%;
+    height: auto;
+    border-radius: 10px ;
+    margin: 10px auto;
+}
+.card p{
+    padding: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card button{
+    cursor: pointer;
+    margin: 10px auto;
+    padding: 10px 25px;
+    font-size: 20px;
+    
+}
+.Quiz-box{
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 10px ;
+    display: none;
+}
+.Quiz-box button{
+    margin: 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+    </style>
+    </head>
+    <body onload="Register()">
+        <div id="div1">
+            <table>
+                <tr>
+                    <th><a href="#">Home</a></th>
+                    <th><a href="#">Math</a></th>
+                    <th><a href="#">Science</a></th>
+                    <th><a href="#">History</a></th>
+                </tr>
+            </table>
+            <h1>Codeyoung</h1>
+        </div>
+        <h2>Your Name is Registered Below</h2>
+        <p id="Welcome"></p>
+        
+
+        <!-- second part -->
+        <div class="quiz-section">
+
+            <div class="card">
+                <img alt="Math" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxzXfXZHX87w6rNWCCjH3cW88tQkKSzican7LZRWHyRrhEccL0COzEsEA&s=10">
+                <p> 60-Minute Hours: Our division of time into 60 minutes and 60 seconds comes from the ancient Sumerians who used a base-60 counting system 5,000 years ago.<br>Dice Sums: The numbers on the opposite sides of a standard gaming die always add up to the number 7.</p>
+                <button onclick="showMath()">Start Math Quiz</button>
+            </div>
+            <div class="card">
+                <img alt="Science" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSvg8R5VtdlAQJ2ME4KUUVZfHHIEyYppskK-pHwB3a-lPuWmoxg9ejN-I&s=10">
+                <p> Bananas glow: Bananas glow blue under ultraviolet light because of breaking down chlorophyll in the peel as they ripen.<br>Leftover pasta is healthier: Cooked and cooled pasta develops more resistant starch, which improves blood sugar control and gut health.</p>
+                <button onclick="showScience()">Start Science Quiz</button>
+            </div>
+            <div class="card">
+                <img alt="History" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFUbsOfEMFEFXIpbJp_rA52qhw4dM_MZIIvExC17BtFA&s=10">
+                <p>Ketchup as Medicine: In the 1830s, tomato ketchup was sold as a cure for indigestion and diarrhea rather than a condiment.<br>Cotton Candy and Dentists: This carnival staple was actually co-invented by a dentist named William Morrison in 1897.</p>
+                <button onclick="showHistory()">Start History Quiz</button>
+            </div>
+
+        </div>
+
+    <!-- Third part HERE -->
+
+        <div class="Quiz-box" id="math-quiz">
+            <h3>Math Quiz</h3>
+            <p>1. What is the answer to the equation x=5, 4x/8</p>
+            <button onclick="wrongAnswer()">3</button>
+            <button onclick="correctAnswer()">2.5</button>
+            <button onclick="wrongAnswer()">1</button>
+            <button onclick="wrongAnswer()">4.3</button>
+
+            <p>2. 72 - 5 x 8</p>
+            <button onclick="wrongAnswer()">496</button>
+            <button onclick="wrongAnswer()">54</button>
+            <button onclick="correctAnswer()">32</button>
+            <button onclick="wrongAnswer()">486</button>
+            
+            <p>3. 5 + 3 x 2  </p>
+            <button onclick="wrongAnswer()">16</button>
+            <button onclick="correctAnswer()">11</button>
+            <button onclick="wrongAnswer()">10</button>
+            <button onclick="wrongAnswer()"">13</button>
+            
+            <p>4. Evaluate 1/2 / 1/4  </p>
+            <button onclick="wrongAnswer()">4</button>
+            <button onclick="wrongAnswer()">1/8</button>
+            <button onclick="correctAnswer()">2</button>
+            <button onclick="wrongAnswer()">6</button>
+                        
+            <p>5. 7.56 + 8.96  </p>
+            <button onclick="correctAnswer()">18.52</button>
+            <button onclick="wrongAnswer()">15.52</button>
+            <button onclick="wrongAnswer()">24.673</button>
+            <button onclick="wrongAnswer()">14.34</button>
+        </div>
+
+        <div class="Quiz-box" id="Science-quiz">
+            <h3>Science Quiz</h3>
+                        
+            <p>1. name one thing that creates a cell </p>
+            <button onclick="wrongAnswer()">robots</button>
+            <button onclick="correctAnswer()">nucleus</button>
+            <button onclick="wrongAnswer()">computer</button>
+            <button onclick="wrongAnswer()">a coding software</button>
+                        
+            <p>2. A passenger in a car is thrown forward when the car stops abruptly. Which physics principle best explains this phenomenon? </p>
+            <button onclick="wrongAnswer()">Law of universal gravitation</button>
+            <button onclick="correctAnswer()">Newtons first law of motion</button>
+            <button onclick="wrongAnswer()">conservation of momentum</button>
+            <button onclick="wrongAnswer()">Newtons third law of motion</button>
+
+            <p>3. Which planet in our solar system is widely known as the Red Planet? </p>
+            <button onclick="correctAnswer()">MARS</button>
+            <button onclick="wrongAnswer()">Earth</button>
+            <button onclick="wrongAnswer()">pluto</button>
+            <button onclick="wrongAnswer()">Venus</button>
+                        
+            <p>4.  What is the chemical symbol for the element gold?</p>
+            <button onclick="wrongAnswer()">AG</button>
+            <button onclick="wrongAnswer()">GD</button>
+            <button onclick="wrongAnswer()">GO</button>
+            <button onclick="correctAnswer()">AU</button>
+                        
+            <p>5. If you drop a feather and a hammer at the exact same time in a complete vacuum (where there is no air resistance), what will happen? </p>
+            <button onclick="wrongAnswer()">The Hammer hits first</button>
+            <button onclick="wrongAnswer()">The feather hits first</button>
+            <button onclick="correctAnswer()">Both at the same time</button>
+            <button onclick="wrongAnswer()">Both dont fall</button>
+        </div>
+
+<div class="Quiz-box" id="History-quiz">
+            <h3>History Quiz</h3>
+                        
+            <p>1.What famous triangular stone structure was built as a grand tomb for Egyptian pharaohs?</p>
+            <button onclick="wrongAnswer()">The Parthenon</button>
+            <button onclick="wrongAnswer()"> The Colosseum</button>
+            <button onclick="correctAnswer()">The Pyramids of Giza</button>
+            <button onclick="wrongAnswer()">The Eiffel Tower</button>
+                        
+            <p>2..
+Which major river was considered the lifeblood and primary source of civilization for Ancient Egypt?
+</p>
+            <button onclick="correctAnswer()">A. The Nile River</button>
+            <button onclick="wrongAnswer()">B. The Amazon River</button>
+            <button onclick="wrongAnswer()">C. The Tigris River</button>
+            <button onclick="wrongAnswer()">D. The Mississippi River</button>
+                        
+            <p>3. What massive natural hazard did the Titanic strike in the North Atlantic Ocean before sinking?
+ </p>
+            <button onclick="wrongAnswer()">A. A shallow coral reef</button>
+            <button onclick="wrongAnswer()">B. A rogue wave</button>
+            <button onclick="wrongAnswer()">C. A submerged sandbar</button>
+            <button onclick="correctAnswer()">D. An iceberg</button>
+                        
+            <p>4. .
+Who served as the commander-in-chief of the Continental Army and later became the first President of the United States?
+ </p>
+            <button onclick="wrongAnswer()">A. Thomas Jefferson</button>
+            <button onclick="wrongAnswer()">B. Benjamin Franklin</button>
+            <button onclick="correctAnswer()">C. George Washington</button>
+            <button onclick="wrongAnswer()">D. Alexander Hamilton</button>
+                        
+            <p>5. During what time span did World War II officially take place globally? </p>
+            <button onclick="wrongAnswer()">A. 1914–1918</button>
+            <button onclick="wrongAnswer()">B. 1929–1939</button>
+            <button onclick="wrongAnswer()">C. 1950–1953</button>
+            <button onclick="correctAnswer()">D. 1939–1945</button>
+        </div>
+
+
+
+        <footer>
+            
+        </footer>    
+
+        <script>
+            function Register(){
+                let name = prompt("Register your name for the quiz");
+
+                if (name === null || name.trim() === "") {
+                name = "Guest";
+            }
+
+            document.getElementById("Welcome").innerHTML = "Hello " + name + ", Welcome to tech learner. Your name is now Registered";
+
+            document.getElementById("div1").style.backgroundImage = "url(https://c8.alamy.com/comp/2G9RFP9/banner-with-question-mark-screen-saver-for-game-or-quiz-in-pop-art-style-vector-illustration-2G9RFP9.jpg)"
+            }
+
+            function correctAnswer(){
+                alert("correct answer");
+            }
+            
+
+            function wrongAnswer(){
+                alert("WRONG please retry.");
+            }
+
+
+            function showMath(){
+                document.getElementById("math-quiz").style.display = "none";
+                document.getElementById("Science-quiz").style.display = "none";
+                document.getElementById("History-quiz").style.display = "none";
+
+                 document.getElementById("math-quiz").style.display = "block";
+            }
+
+            function showScience(){
+                document.getElementById("math-quiz").style.display = "none";
+                document.getElementById("Science-quiz").style.display = "none";
+                document.getElementById("History-quiz").style.display = "none";
+
+                 document.getElementById("Science-quiz").style.display = "block";
+            }
+
+            function showHistory(){
+                document.getElementById("math-quiz").style.display = "none";
+                document.getElementById("Science-quiz").style.display = "none";
+                document.getElementById("History-quiz").style.display = "none";
+
+                 document.getElementById("History-quiz").style.display = "block";
+            }
+        </script>
+    </body>
+</html>
